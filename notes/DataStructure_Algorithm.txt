@@ -1,0 +1,19 @@
+What is an Algorithm
+It is a set of steps or instructions for completing a task
+
+examples of Algorithm
+a recipe
+your morining routine
+
+
+An Algorithm is a set of steps taken to  finish a task
+it is can be refer to as recipes to achieve a task
+
+ a viable solution is refer to an algorithm
+
+However their are certain algorithm that do the job well. an computer science have identify this. so rather than reinvent the wheel. you know and use this in a particular situation.
+
+ we are primary saying that their is an establish body of knowledge to solve
+ a particular problem
+
+
