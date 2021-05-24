@@ -1,0 +1,4 @@
+The Singleton Pattern
+
+    The Problem:
+        Looking at the output fo your program at different points in its execution helps locate and fix bugs swifly.
