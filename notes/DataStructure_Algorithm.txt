@@ -15,5 +15,58 @@ However their are certain algorithm that do the job well. an computer science ha
 
  we are primary saying that their is an establish body of knowledge to solve
  a particular problem
+  Algorithm Thinking
+
+steps one : establish the bounds of the problem
+No solution work on every problem
+define what the problem set is and what the boundary is.
+
+for any problem there is no best solution
+but figure out wht solution work best for the problem.
 
 
+Searching Algorithm
+
+linear search(sequence and simple search) : you start at the begining of the list and compare it to the target value iteratively.
+
+An algorithm must have clear problem statement.
+in defining the problem : define the how the input is specify and what the output looks like when it has done it jolinear search(sequence and simple search) : you start at the begining of the list and compare it to the target value iteratively.
+
+GUIDE OF WHAT AN ALGORITHM IS AND TO SHOW THAT IT IS CORRECT
+
+An algorithm must have clear problem statement.
+in defining the problem : define the how the input is specify and what the output looks like when it has done it job
+
+it must contain a specific set of instructions in an order.
+
+The algorithm should produce result so that we see the behaviour of the algorithm.
+
+The algorithm should complete and should take an infinte number of time
+
+The steps needs to be distint. you must not be able to break it down into further task.
+
+consistent result is how we know that the system is correct
+
+when you encounter a problem work through the guide line first.
+
+first the problem into any possible number of smaller problem
+Clearly define in terms of an input and an output.
+
+WHAT IT MEANS TO HAVE A GOOD ALOGRITHM
+
+Correctness : before you define an algorithm first define the problem.
+An algorithm is set to be correct is for every run on the same value the result is consitent given the same input and also for every input the algorithm should end.
+
+Efficiency ; it helps to solve problem faster and solve a problem better.
+
+MEASURE OF EFFICIENCY
+Time complexity: Efficiency measure by time . is how much it takes to complete a job. the less time you take the more efficient you are.
+
+Space Complexity: it deals with the amount of memory taken on the computer.
+
+The above complexity are both measure uising the same meausrement
+
+considering the number of tries take this is call the running time of the algorithm.
+
+Best case: good scenerio. 
+Average case : average the running time of the algorithm
