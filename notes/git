@@ -1,0 +1,70 @@
+Git : is a version control system that tracks the changes made to files inorder to record what has been done. it also make it easy to revert to specific version. git makes collaboration easier, allowing changes by multiplepeople to all be merge into one source
+
+Git is a version control system that lets you manage and keep track of your source code history.
+
+Github is a cloud based hosting service that lets you manage Git repos
+
+
+
+
+Git commit : is simply a snapshot of the project, it records a snapshot of all tracked files in the project directory(repo).
+
+Each commit is the parent of the next commit and each time you commit the last commit is the becomes the main(master).
+
+Git Branches : Branches are simply pointers to a specific commit. It is to include the work of a commit and all parent commits.
+Syntax : git branch newImage.
+
+A branch is like a copy of your project. It’s used mainly for:
+
+adding a feature in development
+collaborating on the same project with other developers
+not breaking your entire repository
+not upsetting your co-workers
+The purpose of a branch is to isolate your work from the main code base of your project and/or from your co-workers’ work.
+
+The last commit is now a made a branch . But however to start making changes to this branch and not the main use the git command below.
+
+Syntax : git checkout newImage(branch name) or git switch can also be used, in more recent version.
+
+then we can then start making changes to this branch and also commit  the changes made.Thus any changes made now is now associated with branch and not the main.
+When we checkout we leave the specify branch and are now in the main or default branch. - master branch 
+
+To create a branch and checkout at the same time use the commands below.
+
+git checkout -b branch_name or git switch branch_name
+
+To push changes made on a branch you the synthax : git push <remote_name> <branch-name>. The remote name which by default origin
+
+Git Merge : This help in combining work done on branches. Merging in git creates a special commit that has two unique parent.
+
+This action is simply : I want the work from this parent and that the one over here and the set of all their parent
+
+synthax ;git merge branch_name 
+the branch is now merge into the main work which now has all the commit trees and history of changes made.
+
+Git Pull request : 
+    What is a pull request: it also called a merge requests- it is review request. you are asking someone to check the changes on a branch before merging into another branch. you are telling others about the changes you have push to a branch in a repo on github.it is a dedicated forum for discusing the propose changes and review, feedback by pushing follow-up commits.
+
+    note: use a new branch for a pull request, this allow you to send multiple pull request without confusion.
+
+What is Source code Management: it is use to track modification to a source code repo
+
+Syntax to go back to previous commit history : git rest --hard commit_id
+Syntax to abort merge : git merge --abort
+
+
+Merge Conflict : This occur when two or individuals make changes to same file. A conflict arises when two separate branches have made edits to the same line in a file, or when a file has been deleted in one branch but edited in the other.
+
+Solving merge Conflict:
+git commands that can help resolve merge conflic:
+git status : this identify conflicting files
+git  log --merge : this produce a list of commit  that conflict between the merging branches.
+git diff: it find the difference between states of repo/files.it can help predict and prevent merge conflicts.
+
+Two types of merge conflict
+A merge failure on start : it produce this error-error: Entry '<fileName>' not uptodate. Cannot merge. (Changes in working directory)
+
+A failure DURING a merge indicates a conflict between the current local branch and the branch being merged. This indicates a conflict with another developers code.
+it output: error: Entry '<fileName>' would be overwritten by merge. Cannot merge. (Changes in staging area)
+
+

@@ -1,0 +1,3 @@
+Git commit : is simply a snapshot of the project, it records a snapshot of all tracked files in the project directory(repo).
+
+Each commit is the parent of the next commit and each time you commit the last commit is the becomes the main(master)

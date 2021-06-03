@@ -1,0 +1,57 @@
+Emacs is the extensible, customizable self-documenting real time display editor. it helps to be productive by provding an integrated environment for many different kinds of task
+Basis Emacs Commands Definition
+    C-h,t : to run the tutorial    
+    C-x,C-c : to end Emacs session
+    C-g :  to quit a partially entered command
+    Navigation Commands
+
+    C-v, alt-v : screenful navigation
+    C-l : for locating the cursor position and moving it up middle and down.
+    Basic Cursor Control
+
+    C-p : previous line
+
+    C-b : move a character backward
+
+    C-n : next line/ scrolling
+
+    C-f : move character forward
+
+    M-f : move by word 
+
+    M-b : move by word backward
+
+    C-a : move the begining of the line
+
+    C-e : move to the end of the line
+
+    M-a : move the cursor backward to the begining of the sentence
+
+    M-e : move cursor forward to the end of a sentence
+    
+    M-< : to move to the begining of the file
+
+    M-> : to move to the end of the file
+
+    C-u [digit] C-f(or other commands) : this moves file forward base on the number of digit specify.
+    NOte : to get <,> you need to use the shift key
+    Note : C-key operate on character and lines while the M-key combo operate on words, sentences and paragraph.
+
+    Working with Windows in Emacs
+        C-x 1 : to kill all other window and leave only one window
+
+Opening file wihin Emacs : C-x C-f
+Saving file in Emacs : C-x C-s
+Cutting text in Emacs : C-k
+Pasting : C-y
+
+Searching : C-s --forward
+            C-r --backward
+
+       Working with Buffer
+            Buffers is a object to save file.
+            
+            C-x C-b : to list buffers
+            C-x b buffer_name : open a specific buffer from the list
+            C-x s : save some buffers 
+
