@@ -67,4 +67,39 @@ A merge failure on start : it produce this error-error: Entry '<fileName>' not u
 A failure DURING a merge indicates a conflict between the current local branch and the branch being merged. This indicates a conflict with another developers code.
 it output: error: Entry '<fileName>' would be overwritten by merge. Cannot merge. (Changes in staging area)
 
+Creating a .gitignore file :
+a gitignore file helps to tell git which file or directory we want to ignore.it can be local(created in a repo) or globally to apply to all project track by git.
 
+Defining a local gitignore.
+create a file .gitignore in the project repo or directory and define the files to ignore
+The entries in this file can also follow a matching pattern.
+
+* is used as a wildcard match
+/ is used to ignore pathnames relative to the .gitignore file
+# is used to add comments to a .gitignore file
+
+This is an example of what the .gitignore file could look like:
+
+# Ignore Mac system files
+.DS_store
+
+# Ignore node_modules folder
+node_modules
+
+# Ignore all text files
+*.txt
+
+# Ignore files related to API keys
+.env
+
+# Ignore SASS config files
+.sass-cache
+
+# Ignore emacs ~(temp)file
+*~
+
+Creating a Global .gitignore file :
+run the following command : git config --global core.excludesfile ~/.gitignore_global
+
+
+Source Code Management : they tool the allow developer to organize code iteration chronologically and version it for an application
