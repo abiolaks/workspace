@@ -1,0 +1,146 @@
+let mapleader =',' " mapping leader to 
+inoremap jk <Esc> 
+set smartindent
+set wildmode=longest,list,full
+set expandtab
+set hidden
+set noerrorbells
+set tabstop=4 softtabstop=4
+set nohlsearch
+set shiftwidth=4
+set nocompatible
+set nobackup
+set noswapfile
+set incsearch
+set relativenumber
+set smartindent
+set nu
+set undodir=~/.vim/undodir
+set undofile
+set hidden
+set encoding=utf-8
+set noerrorbells
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'kien/ctrlp.vim'
+Plug 'makerj/vim-pdf'
+Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-fugitive'  " for git 
+Plug 'shougo/unite.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "for my project
+Plug 'christoomey/vim-tmux-navigator' " for tmux
+Plug 'ap/vim-css-color' " for show the color  when using css
+Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'} " for color scheme
+Plug 'sheerun/vim-polyglot'         "for synthax highlighting
+Plug 'rhysd/open-pdf.vim'
+Plug 'ron89/thesaurus_query.vim'
+call plug#end()
+" Configuration for Gruvbox-material
+set termguicolors
+
+set background=dark "for dark version
+
+"set contrast
+"available values: 'Hard, medium, soft
+let g:gruvbox_material_background = 'soft'
+colorscheme gruvbox-material
+
+
+"Configuration for ctrlp plugin
+    "change the default mapping 
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd ='CtrlP'
+
+"this set local working directory 
+let g:ctrlp_working_path_mode = 'ra'
+
+"Exclude files and directories using vim's wildignore
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+    \ 'file': '\v\.(exe|so|dll)$',
+    \ 'link': 'some_bad_symbolic_links',
+    \ }
+let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
+
+" settings for emmnet html tag completer
+let g:user_emmet_mode='n'    "only enable normal mode functions.
+    "enable emnet for just html/css
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+"Redefine trigger key
+let g:user_emmnet_leader_key=','
+
+"configuration for vim tmux navigator
+    "ctrl h : left
+    "ctrl j : Down
+    "Ctrl k : Up
+    "ctrl l : Right
+    "ctrl \ : previous split
+"configuration setting for coc
+" use <c-space>for trigger completion
+" use <tab> for trigger completion and navigate to the next complete item
+"function! s:check_back_space() abort
+ " let col = col('.') - 1
+ " return !col || getline('.')[col - 1]  =~ '\s'
+"endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
+
+func! WordProcessor()
+    "Movement changes
+
+    map j gj
+    map k gk
+
+    "formating text
+
+    setlocal formatoptions=1
+    setlocal noexpandtab 
+    setlocal wrap
+    setlocal linebreak 
+    
+    "spelling and thesaurus
+
+
+    setlocal spell spelllang=en_us
+    "set thesaurus+=/home/test/.vim/thesaurus/mthesaur.txt
+    set complete+=s
+endfu
+
+
+" Call compile
+" Open the PDF from /tmp/
+function! Preview()
+        :call Compile()<CR><CR>
+        execute "! zathura /tmp/op.pdf &"
+endfunction
+
+" [1] Get the extension of the file
+" [2] Apply appropriate compilation command
+" [3] Save PDF as /tmp/op.pdf
+function! Compile()
+        let extension = expand('%:e')
+        if extension == "ms"
+                execute "! groff -ms % -T pdf > /tmp/op.pdf"
+        elseif extension == "tex"
+                execute "! pandoc -f latex -t latex % -o /tmp/op.pdf"
+        elseif extension == "md"
+                execute "! pandoc % -s -o /tmp/op.pdf"
+        endif
+endfunction
+
+" map \ + p to preview
+noremap <leader>p :call Preview()<CR><CR><CR>
+
+" map \ + q to compile
+noremap <leader>q :call Compile()<CR><CR>
+set wrap
+nnoremap <F5> :set linebreak<CR>
+nnoremap <C-F5> :set nolinebreak<CR>

@@ -1,0 +1,100 @@
+"maps jk  to esc 
+set tabstop=4 softtabstop=4     "for tap spacing 
+inoremap jk <esc>
+set shiftwidth=4                "for tab spacing and indent
+set expandtab
+set smartindent
+set nu
+set relativenumber
+set ignorecase
+set nohlsearch
+set hidden
+set noerrorbells
+set wrap
+set smartcase
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+set incsearch
+set scrolloff=8
+set colorcolumn=150
+set signcolumn=yes
+set noswapfile
+
+"emnemt plugin
+let g:user_emmet_mode='n'    "only enable normal mode functions.
+let g:user_emmet_leader_key=','
+
+"vim plug
+call plug#begin()
+Plug 'tpope/vim-fugitive'            " for git integration
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "for my project
+Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
+Plug 'mattn/emmet-vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+call plug#end()
+" configuring gruvbox- material color scheme
+" " important!!
+set termguicolors
+
+" for dark version
+set background=dark
+
+
+let g:vimwiki_list = [{'path': '~/Dropbox/Public/briefcase/vimwiki'}]
+" for light version
+"set background=light
+
+" set contrast
+" this configuration option should be placed before `colorscheme gruvbox-material`
+" available values: 'hard', 'medium'(default), 'soft'
+let g:gruvbox_material_background = 'soft'
+
+colorscheme gruvbox-material
+"setting for airline
+let g:airline_section_x = ''
+let g:airline_theme = 'gruvbox_material_background'
+
+" for Lightline
+let g:lightline = {'colorscheme' : 'gruvbox_material'}
+"for fuzzyFinder mapping
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+"for auto completion using tab
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+"Using vim a word processor: settings below
+func! WordProcessor()
+    "Movement changes
+    map j gj
+    map k gk
+
+    "formatting text
+    setlocal formatoptions=1
+    setlocal noexpandtab
+    setlocal wrap
+    setlocal linebreak
+
+    "spelling and thesaurus
+    setlocal spell spelllang=en_us
+    set  thesaurus+=/home/test/.vim/thesaurus/mthesaur.txt
+    "complete+=s makes autocompletion search the thesaurus
+    set complete+=s
+
+endfu
+com! WP call WordProcessor()
