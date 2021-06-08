@@ -1,0 +1,9 @@
+Understanding the Concept of Virtual Machine
+
+Vm is the emulation of a computer systems and are based on the computer achitecture and provides functionality of the physical computer.
+
+A virtual machine as define by popek and Goldberg as an efficient, isolated duplicate of a real computer machine .
+
+The physical machine running the vm is refer to as the host and while the vm emulated on the that machine is generally referred to as the guest. A host can emulate several guest, each of which can emulate different operating systems and hardware platforms.
+
+Virtualization was developed in 1990 and is different from simulaion and emulation. Virtualization employs technique used to create instances of an environment.

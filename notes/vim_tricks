@@ -1,0 +1,19 @@
+%s/(what to replace)/(what to replace with)
+
+vip -- highlight paragraph
+
+. --- to rerun the command you just ran
+
+norm command - run a series of normal mode presses
+
+time travel : earlier and later with minute
+
+Exiting vim : Ctrl zz, C Q
+
+zz, zt, zb - moving the cursor and with screen 
+
+moving in curly bracket({) move at an entire paragraph
+
+insert mode : i, I, A, a
+
+to save and quit : x!, x- to save.

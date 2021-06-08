@@ -1,0 +1,42 @@
+Tmux Tricks
+
+To copy from clipboard into tmux : Ctrl Shift v
+
+To open tmux : type tmux
+to name a session : tmux new -s session_name
+to detach from the tmux session : Ctrl,b d
+to list all currently  running session : tmux ls
+
+To attach to a session : tmux attach-session -t 0
+
+Working with Tmux windows and Panes
+
+To create a new window with shell : Ctrl,b c
+
+to choose window from list : Ctrl b,w
+to switch to windows by number : Ctrl b, N(number)
+to rename current window  :Ctrl b ,
+to split current pane into two panes horizontally : Ctrl b, %
+To close current pane  : Ctrl b, x
+to toggle between the current and previous pane : Ctrl b , ;
+to split vertically into two panes : Ctrl b, "
+
+Customizing Tmux
+you tinker with this file to customise tmux :  ~/.tmux.conf
+
+Basic TMux usage:
+create session : tmux new -s session_name
+run program
+detach for session: Ctrl b, d
+reattach to session : tmux attach-session -t session_name
+
+My_tmux_Mappings
+c-space  :prefix
+prefix, hjkl for navigation between panes
+prefix, :
+prefix, v for vertical split
+prefix, d for horizontal split
+
+prefix + zoom out
+prefix - zoom in 
+
