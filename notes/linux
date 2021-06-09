@@ -1,0 +1,25 @@
+What is a Shell
+
+The shell is a programm that takes input from the keyboard and gives the operating system to perform. Before  the advent of GUI is the shell.
+
+What is a Terminal
+
+Its a program called a terminal emulator. This program opens a window and lets you interact with the shell.
+
+What is shebang 
+is the character sequence consisting of the characters number sign and exclamation mark (#!) at the beginning of a script
+
+Type of commands
+
+An executable program : located in usr/bin, program such as compiled binaries written in c, c++ shell, perl python
+
+shell bultin :internally commands - cd
+
+shell function : shell script, and shell funcitons
+
+An alias : commands built from other commands.
+
+which, type, help
+
+wc -l file : to check number of lines in a file
+head -n 1 file_name : to get the first line in a file

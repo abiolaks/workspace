@@ -1,0 +1,58 @@
+Working with process
+
+C-c : interupt the current foreground
+C-z : Suspend the current running the termianl
+fg process_name  : to recover process suspended by C-c
+C-d : To close the bash shell
+
+Controlling the Screen 
+
+C-l : to clear screen
+C-s : stops all output to the screen but does not stops the process
+C-Q : Resume output to the screen after stopping it wiht C-s
+
+Moving the Cursor
+
+C-A or home : Go to the beginning of the line
+C-E or End : Go to the end of the line
+Alt,B : Go left(back) one word
+Ctrl B : Go back one Character
+Alt F : Go right forward one word
+Ctrl F : Go right one character
+C-XX : move between the beginning of the line and the current position of the cursor
+
+Deleting Text
+
+C-D or Delete : Delete character under the cursor
+Alt D : Delete all character after the cursor on the current line
+C-H or backspace : Delete the character before the cursor
+
+
+Fixing Typos : to fix typos and undo key presses
+
+Alt T : swap the current word withe the previous word
+C-T : swap the last two characters before the cursor with each other. You can use this to quickly fix typos when you type two characters in the wrong order.
+C-_: undo your last key press, you can repeat multiple times
+
+Cutting and Pasting
+
+C-W :cut the word before the cursor adding it to the clipboard
+C-K : cut the part of the line after the cursor adding it to the clipboard
+C-U : cut the part of the line before the cursor adding it to the clipboard.
+C-Y : paste the last thing you cut from the clipboard. 
+
+Capilalizing Characters
+
+Alt U : Capitalize every character from the cursor to the end of the current word. converting characters to upper case
+
+Alt L : uncapitalize every characters
+ALt C : capitalize the character under the cursor.
+
+working with command History
+C-P : previous comand
+C-N : next command in history
+
+
+Mouse focus
+gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
+you replace the sloppy with click or mouse. click is the default.
